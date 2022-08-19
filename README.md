@@ -46,7 +46,6 @@ W skrypcie tym należy uzupełnić parametry. Szczegóły dotyczące parametrów
 - work_days_to_send_questionnaire: liczba dni roboczych do wysyłki ankiety, dla danego zamówienia. Parametr musi być liczbą całkowitą w zakresie od 0 do 21. W tym parametrze nie używamy apostrofów, a cały wiersz kończymy przecinkiem.
 np. work_days_to_send_questionnaire = 0 lub work_days_to_send_questionnaire = 10 Ten parametr nie jest wymagany. Jeśli go nie podasz, system automatycznie uzupełni go na podstawie średniej wartości dla Twojej kategorii lub w przypadku jej braku domyślną wartością równą 3.
 - amount: kwota zapłacona za całość zamówienia. Powinna to być liczba, gdzie separatorem między liczbą całkowitą, a ułamkiem (czyli w przypadku Polski między złotówką a groszem) jest kropka. W tym parametrze nie używamy apostrofów.
-<br>
 ## Opcje zaawansowane – ręczne zarządzanie zgodą na śledzenie użytkownika
 Skrypt Ceneo pozwala na wyłączenie śledzenia indywidualnego użytkownika dopóki nie zaakceptuje on zgody na posługiwanie się mechanizmami śledzącymi. Jeżeli tego nie zrobi, to wtedy zbierzemy jedynie anonimowe informacje o zakupie jako przejście użytkownika z portalu Ceneo.<br>
 Aby uaktywnić ten tryb należy na początku umieścić skrypt główny pomiędzy tagami `<HEAD>`
