@@ -10,6 +10,8 @@
 # Jak zadawać pytania i zgłaszać problemy w GitHubie?
 Wejdź w zakładkę [Issues](https://github.com/ceneo/ceneo-integration/issues) i załóż nowe zgłoszenie. Pamiętaj, aby w zgłoszeniu podać jak najwięcej dokładnych informacji - dzięki temu szybciej uzyskasz pomoc.
 
+<div class="page" />
+
 # Podstawowa instalacja skryptu
 W podstawowej instalacji skryptu należy skopiować i uzupełnić poniższy kod.
 
@@ -64,7 +66,10 @@ W skrypcie tym należy uzupełnić parametry. Szczegóły dotyczące parametrów
 np. `work_days_to_send_questionnaire: 0,` lub `work_days_to_send_questionnaire: 10,`<br> Ten parametr nie jest wymagany. Jeśli go nie podasz, system automatycznie uzupełni go na podstawie średniej wartości dla Twojej kategorii lub w przypadku jej braku domyślną wartością równą 3.
 - **amount**: kwota zapłacona za całość zamówienia. Powinna to być liczba, gdzie separatorem między liczbą całkowitą, a ułamkiem (czyli w przypadku Polski między złotówką a groszem) jest kropka. W tym parametrze <ins>nie używamy apostrofów</ins>.
 
+<div class="page" />
+
 # Opcje zaawansowane - ręczne zarządzanie zgodą na śledzenie użytkownika
+
 Skrypt Ceneo pozwala na wyłączenie śledzenia indywidualnego użytkownika dopóki nie zaakceptuje on zgody na posługiwanie się mechanizmami śledzącymi. Jeżeli tego nie zrobi, to wtedy zbierzemy jedynie anonimowe informacje o zakupie jako przejście użytkownika z portalu Ceneo.<br>
 Aby uaktywnić ten tryb należy na początku umieścić skrypt główny pomiędzy tagami `<HEAD>`
 i `</HEAD>` na każdej stronie sklepu, tak jak zostało to opisane na początku instrukcji.
@@ -106,6 +111,8 @@ Następnie gdy użytkownik wyrazi zgodę należy uruchomić następującą funkc
 Uwaga: powyższy skrypt ze zezwoleniem na śledzenie **musi** się również pojawiać na każdej stronie sklepu od momentu zezwolenia przez użytkownika do momentu wycofania tej zgody. Najlepiej aby pojawiał się on pod koniec sekcji HEAD strony (po skrypcie głównym, ale przed skryptem
 z potwierdzeniem zamówienia umiejscowionym w sekcji BODY).
 
+<div class="page" />
+
 # Opcje zaawansowane – wykorzystanie DataLayer
 
 Skrypt Ceneo domyślne czyta również dane umieszczane w tablicy DataLayer wykorzystywanej przez analitykę Google. Udostępnia on także możliwość wyłączenia tego odczytywania lub wykorzystanie tablicy DataLayer o innej nazwie zmiennej. W tym celu należy wykorzystać dodatkowy parametr skryptu zaznaczony poniżej.
@@ -120,4 +127,4 @@ const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; 
 
 Parametr `{NAZWA_ZMIENNEJ_DATALAYER}` może przybrać następujące wartości:
 - `""` (pusty napis) lub `null` wtedy czytanie informacji z DataLayer zostaje wyłączone
-- Dowolny napis, np. `„testLayer”` wtedy skrypt zamiast sięgać do tablicy dataLayer będzie próbował wyciągać informacje z testLayer.
+- Dowolny napis, np. `"testLayer"` wtedy skrypt zamiast sięgać do tablicy dataLayer będzie próbował wyciągać informacje z testLayer.
