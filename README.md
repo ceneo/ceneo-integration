@@ -1,3 +1,8 @@
+<img src="assets/ceneo_logo.png" style="max-width:220px;">
+<img src="assets/ceneo_zo_logo.png" style="margin-left:25px;max-width:180px;">
+
+<br>
+
 # Instrukcja instalacji skryptu Ceneo
 
 # Spis treści
@@ -20,10 +25,10 @@ W podstawowej instalacji skryptu należy skopiować i uzupełnić poniższy kod.
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
 const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
-})(window, document, "script", "{GUID}");</script>
+})(window, document, "script", "GUID");</script>
 ```
 
-`{GUID}` musisz zmienić na Twój indywidualny numer GUID, który znajdziesz w Panelu Ceneo w zakładce Opinie/Zaufane Opinie/Instrukcja instalacji.\
+`GUID` musisz zmienić na Twój indywidualny numer GUID, który znajdziesz w Panelu Ceneo w zakładce Opinie/Zaufane Opinie/Instrukcja instalacji.\
 Tak uzupełniony skrypt należy umieścić pomiędzy tagami `<HEAD>` i `</HEAD>` na każdej stronie Twojego sklepu.
 <br><br>
 
@@ -79,7 +84,7 @@ i `</HEAD>` na każdej stronie sklepu, tak jak zostało to opisane na początku 
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
 const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
-})(window, document, "script", "{GUID}");</script>
+})(window, document, "script", "GUID");</script>
 ```
 
 A zaraz pod nim należy umieścić skrypt uruchamiający ręczne zarządzanie zgodą:
@@ -95,7 +100,7 @@ Całość powinna wyglądać jak poniżej, oraz powinna znajdować się na każd
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
 const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
-})(window, document, "script", "{GUID}");</script>
+})(window, document, "script", "GUID");</script>
 <script>_ceneo('enableManualConsentMode');</script>
 ```
 
@@ -122,9 +127,9 @@ Skrypt Ceneo domyślne czyta również dane umieszczane w tablicy DataLayer wyko
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
 const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
-})(window, document, "script", "{GUID}", "{NAZWA_ZMIENNEJ_DATALAYER}");</script>
+})(window, document, "script", "GUID", "NAZWA_ZMIENNEJ_DATALAYER");</script>
 ```
 
-Parametr `{NAZWA_ZMIENNEJ_DATALAYER}` może przybrać następujące wartości:
+Parametr `NAZWA_ZMIENNEJ_DATALAYER` może przybrać następujące wartości:
 - `""` (pusty napis) lub `null` wtedy czytanie informacji z DataLayer zostaje wyłączone
 - Dowolny napis, np. `"testLayer"` wtedy skrypt zamiast sięgać do tablicy dataLayer będzie próbował wyciągać informacje z testLayer.
