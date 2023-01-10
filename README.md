@@ -90,7 +90,7 @@ const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; 
 A zaraz pod nim należy umieścić skrypt uruchamiający ręczne zarządzanie zgodą:
 
 ```HTML
-<script>_ceneo('enableManualConsentMaode');</script>
+<script>_ceneo('enableManualConsentMode');</script>
 ```
 
 Całość powinna wyglądać jak poniżej, oraz powinna znajdować się na każdej stronie sklepu pomiędzy tagami `<HEAD>` i `</HEAD>`:
