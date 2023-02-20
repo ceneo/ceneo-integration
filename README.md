@@ -24,7 +24,7 @@ W podstawowej instalacji skryptu należy skopiować i uzupełnić poniższy kod.
 <script>(function(w,d,s,i,dl){w._ceneo = w._ceneo || function () {
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
-const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
+var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
 })(window, document, "script", "GUID");</script>
 ```
 
@@ -83,7 +83,7 @@ i `</HEAD>` na każdej stronie sklepu, tak jak zostało to opisane na początku 
 <script>(function(w,d,s,i,dl){w._ceneo = w._ceneo || function () {
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
-const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
+var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
 })(window, document, "script", "GUID");</script>
 ```
 
@@ -99,7 +99,7 @@ Całość powinna wyglądać jak poniżej, oraz powinna znajdować się na każd
 <script>(function(w,d,s,i,dl){w._ceneo = w._ceneo || function () {
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
-const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
+var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
 })(window, document, "script", "GUID");</script>
 <script>_ceneo('enableManualConsentMode');</script>
 ```
@@ -126,7 +126,7 @@ Skrypt Ceneo domyślne czyta również dane umieszczane w tablicy DataLayer wyko
 <script>(function(w,d,s,i,dl){w._ceneo = w._ceneo || function () {
 w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
 w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
-const f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
+var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
 })(window, document, "script", "GUID", "NAZWA_ZMIENNEJ_DATALAYER");</script>
 ```
 
