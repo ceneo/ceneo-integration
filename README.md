@@ -9,7 +9,6 @@
 1. [Jak zadawać pytania i zgłaszać problemy w GitHubie?](#jak-zadawać-pytania-i-zgłaszać-problemy-w-githubie)
 1. [Podstawowa instalacja skryptu](#podstawowa-instalacja-skryptu)
 1. [Opcje zaawansowane - ręczne zarządzanie zgodą na śledzenie użytkownika](#opcje-zaawansowane---ręczne-zarządzanie-zgodą-na-śledzenie-użytkownika)
-1. [Opcje zaawansowane – wykorzystanie DataLayer](#opcje-zaawansowane-–-wykorzystanie-datalayer)
 
 
 # Jak zadawać pytania i zgłaszać problemy w GitHubie?
@@ -117,19 +116,3 @@ Uwaga: powyższy skrypt ze zezwoleniem na śledzenie **musi** się również poj
 z potwierdzeniem zamówienia umiejscowionym w sekcji BODY).
 
 <div class="page" />
-
-# Opcje zaawansowane – wykorzystanie DataLayer
-
-Skrypt Ceneo domyślne czyta również dane umieszczane w tablicy DataLayer wykorzystywanej przez analitykę Google. Udostępnia on także możliwość wyłączenia tego odczytywania lub wykorzystanie tablicy DataLayer o innej nazwie zmiennej. W tym celu należy wykorzystać dodatkowy parametr skryptu zaznaczony poniżej.
-
-```HTML
-<script>(function(w,d,s,i,dl){w._ceneo = w._ceneo || function () {
-w._ceneo.e = w._ceneo.e || []; w._ceneo.e.push(arguments); };
-w._ceneo.e = w._ceneo.e || [];dl=dl===undefined?"dataLayer":dl;
-var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.defer = true; j.src = "https://ssl.ceneo.pl/ct/v5/script.js?accountGuid=" + i + "&t=" + Date.now() + (dl ? "&dl=" + dl : ''); f.parentNode.insertBefore(j, f);
-})(window, document, "script", "GUID", "NAZWA_ZMIENNEJ_DATALAYER");</script>
-```
-
-Parametr `NAZWA_ZMIENNEJ_DATALAYER` może przybrać następujące wartości:
-- `""` (pusty napis) lub `null` wtedy czytanie informacji z DataLayer zostaje wyłączone
-- Dowolny napis, np. `"testLayer"` wtedy skrypt zamiast sięgać do tablicy dataLayer będzie próbował wyciągać informacje z testLayer.
